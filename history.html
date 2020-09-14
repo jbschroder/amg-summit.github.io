@@ -1,0 +1,466 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<head>
+<link rel="shortcut icon" href="images/leaf.ico">
+<title>AMG Summit</title>
+<link rel="stylesheet" href="stylesheet.css" type="text/css"></link>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+<!-- Begin
+  var pic_1 = new Image();
+  var pic_2 = new Image();
+  var pic_3 = new Image();
+  var pic_4 = new Image();
+  var pic_5 = new Image();
+  pic_1.src = "./images/LC001.JPG";
+  pic_2.src = "./images/LC002.JPG";
+  pic_3.src = "./images/LC003.JPG";
+  pic_4.src = "./images/LC004.JPG";
+  pic_5.src = "./images/LC007.JPG";
+function doButtons(picimage) {
+document['picture'].src=picimage;
+}
+//  End -->
+</script>
+</head>
+
+<!-- ----------------main body---------------- -->
+<body>
+
+<center>
+
+<br><br><br><br>
+
+<table width=63%>
+<tr>
+<td>
+  <div id=box>
+  <table>
+    <tr>
+    <td width=500>
+    <img name=picture src="images/LC007.JPG">
+    </td>
+    <td width=5%></td>
+    <td>
+    <p id=big>The AMG Summit</p>
+    <p id=medium>A research workshop in the San Juan mountains and elsewhere in Colorado for the
+advancement of algebraic multigrid methods and related methods.</p>
+    </td>
+    </tr>
+  </table>
+  </div>
+</td>
+</tr>
+</table>
+
+<table width=63%>
+<tr>
+<td>
+  <div id=box>
+  <table width=100%>
+    <tr align=center id=big>
+    <td><a onmouseover = "doButtons('./images/LC001.JPG')" href="schedule.html">Schedule</a></td>
+    <td><a onmouseover = "doButtons('./images/LC002.JPG')" href="history.html">History</a></td>
+    <td><a onmouseover = "doButtons('./images/LC003.JPG')" href="participants.html">Participants</a></td>
+    <td><a onmouseover = "doButtons('./images/LC004.JPG')" href="sponsors.html">Sponsors</a></td>
+    <td><a onmouseover = "doButtons('./images/LC007.JPG')" href="topics.html"> Current Topics</a></td>
+    </tr>
+  </table>
+  </div>
+</td>
+</tr>
+</table>
+
+<!-- -------------------------------- -->
+
+<table width=63%>
+<tr>
+<td>
+  <div id=box>
+
+In 1997, a casual research meeting between researchers at the <a href="http://amath.colorado.edu">University of Colorado's Applied Math Department</a>
+and <a href="http://www.llnl.gov/CASC/">Lawrence Livermore National Lab's CASC Division</a> met in Frisco, Colorado, to collaborate on AMG and related issues. They met again in Boulder in 1998. In 2000, the meetings became annual. The Summits from 2000 to 2009 were held in Lake City, Colorado. From 2002 until 2006, they expanded to include an Applied Math research retreat, primarily focused on the FOSLS methodology. Between 2010 and 2015, the Summits alternated between Boulder in even years and Lake City in odd years. In 2016, the Summits began alternating between Los Osos, on California&#39;s central coast, in even years and Lake City, in southwestern Colorado&#39;s high country, in odd years.<br><br>
+
+The structure is like that of the
+<!-- a href="http://amath.colorado.edu/faculty/copper/" -->
+<a href="http://grandmaster.colorado.edu/~copper/index.html">
+Copper Mountain meetings</a> in the sense of morning and
+evening sessions, with afternoons free to recover from the intensity of the discussions. But the 'sessions' are much different. We strongly
+discourage formal talks about what is known in favor of exposing troubles and open issues. The knowledge content is primarily for setting the scene
+for the attendees to try to work on troubles and questions, and help suggest some avenues of further research. <br><br><br>
+
+<center>
+<img width=30% src="images/whiteboard.JPG"> &nbsp &nbsp <img width=30% src="images/computing.JPG"> &nbsp &nbsp<img width=30% src="images/scott.JPG">
+</center>
+
+<br><br>
+
+The following lists represent the main topics of discussion at the recent Summits. <br>
+
+<h3>Topics for the 2018 meeting</h3>
+
+<li>Solvers for matrix-free systems
+<li>AMG for Hessians in PDE-constrained optimization
+<li>MG coarse-graining of dynamical systems (power grids)
+<li>MG for systems of BVPs & PDEs
+<li>Virtual elements for networks
+<li>Automatic smoothers for AMG (with complementary interpolation, maybe)
+<li>Parallel time integration for hyperbolic problems
+<li>AMR for FOSLS
+<li>Ill-conditioning effects on MG & AMG
+<li>AMG for boundary conditions treated by Nitsche's method
+<li>AMG for FOSLS applied to hyperbolic equations
+<li>Necessary and sufficient conditions for two-level convergence of MGRiT
+<li>Optimal coarse-grid solvers for MGRiT
+<li>Space-time for hyperbolic PDEs
+<li>Unassembled AIR for advection
+<li>Coarsening for pAIR
+<li>MG for uncertainty quantification, particularly for Bayesian inference
+<li>MG reduction for reservoir modeling
+<li>Nonlinear MG
+<li>Coarse-grid stability and convergence for hypersonic flow
+<li>AMGe
+<li>MG for fractional Laplacians
+<li>Implementation for elasticity
+<li>Stopping criteria for iterative solvers
+<li>MG for structured/unstructured matrices
+
+<h3>The 2017 meeting</h3>
+
+<li>With half precision (16 bit!) hardware coming out, can we use this with multigrid, e.g. when representing the values in a hierarchical way? 
+<li>The best published algorithm for 2D multigrid is St&uuml;ben&apos;s 1982 version using 30 Flops per unknown. Can one do better? What are the optimal algorithms for 3D? What for other problems? Higher order? Stokes?
+<li>When data transport is the dominating cost factor, can we prove lower bounds for MG? How would we quantify data transport in MG anyway? 
+<li>Will we ever be able to state beforehand what the <i>total</i> cost 
+will be to solve any particular but practical class of nxn matrix equations by AMG?
+<li>Adaptive and bootstrap AMG and SA attempt to determine local representations for the near-kernel components of relaxation automatically by solving Ax=0. But how can we determine the <i>minimal</i> number of local vectors we need to do this (i. e., a local &apos;basis&apos;)? Classical  adaptive SA readily determines when we don&apos;t have enough (i. e., when the vectors don&apos;t &apos;span&apos; the near kernel), but how do we best handle redundancy (i. e., &apos;linear dependence&apos;)?
+<li>What is the status of AMG for Helmholtz, systems, and nonsymmetric problems?
+<li>Can MGRIT be used for neural networks?
+<li>We generally expect PDE solutions to be smooth in the limit of refinement so that at two sufficiently close points the solution will be almost identical. Given that one will only differ from the other by a few bits, can we do something smarter than storing both numbers in full precision? Can we operate directly on some kind of compressed representation, or just on the differences?
+<li>What&apos;s the status of wavelet multigrid research?
+<li>What&apos;s the status of multigrid methods for training algorithms of deep neural networks? 
+<li>What is the correct balance between restriction and interpolation for non-symmetric problems?
+Symmetric theory says interpolation must approximate low modes accurately. For non-symmetric
+systems, if we use ideal interpolation, restriction is not too important. Conversely, if we use ideal 
+restriction, interpolation is not very important.
+<li>Multigrid based on approximate ideal reduction has been developed and works well on
+logically lower triangular systems.  Can multigrid beat a backsolve for lower triangular systems 
+on a parallel machine?
+<li>Two-grid and V-cycle theory is well developed for SPD systems, especially M-matrices.
+What is the best way to generalize this to non symmetric systems?
+<li>Parallel in time (PiT) algorithms have been developed and shown to be more effective than
+sequential time stepping on massively parallel machines. Recently,  PiT  algorithms were modified 
+to include Richardson extrapolation and adaptive time stepping. Can they be modified to
+give both spatial and temporal local adaptive refinement?
+<li>How do we precondition block-structured matrices, especially those from discretized first-order systems and, in particular, by way of a Schur complement?
+
+<h3>The 2016 Meeting</h3>
+<li> Nonsymmetric AMG, Ideal Restriction, & Nonsymmetric Energy-Min
+<li> Indefinite AMG
+<li> Interior Point Methods
+<li> AMG with Multiple Coarse Grids
+<li> AMG for Kronecker Products & Sums
+<li> Adaptivity & Energy-Min for Systems
+<li> PyAMG
+<li> Combining AMG & Direct Methods
+<li> AMG for PDE-Constrained Optimization
+<li> Multigrid-in-Time for Hyperbolic & Other Problems
+<li> Trace- & Energy-Min AMG Interpolation Construction
+<li> AMG for Systems
+<li> Adaptive AMG
+<li> Physics-Based AMG
+<li> Combining Algebraic Preconditioners & Physics-Based MG
+<li> Non-Quadratic Optimization, e. g., for Hyperelastic Materials
+<li> Solvers for High-Order Discretizations
+<li> Solvers for Nearly Incompressible Elasticity
+<li> AMG on Next-Gen Architectures (e.g., CPU+GPU Nodes)
+<li> Multigrid for Model Reduction of Dynamical Systems
+<li> The Role of PDE Theory in MG for PDE Systems
+<li> FAMG
+<li> AMG-DD Theory
+<li> Signed-Undirected & Unsigned-Directed Graph Applications
+<li> New Directed Graph Coarsening Schemes
+<li> Multiplicative-Update Multigrid for Nonlinear Power Flow Equations
+<li> A Zoo of Geometric AMGe Solvers
+<li> Application to MLMC (Multilevel Monte Carlo)
+<li> Update on Hybridization H(div) Solvers
+<li> Update on AMG for Powerflow Problems (with Multiplicative Correction)
+<li> Smoothing Property & Smoothed Interpolant Imply TG Convergence
+<li> Spectral Coarsening for Graph Laplacian/Finite Volume
+<li> Artificial Intelligence
+
+<h3>The 2015 Meeting</h3>
+<li> Full or Nested Iteration AMG (FAMG)
+<li> AMG & Domain/Range Decomposition (AMG-DD/RD)
+<li> AMG for H(div) Systems
+<li> AMG for FOSLS Systems
+<li> Parallel in Time
+<li> Anisotropic Diffusion & FOSLS for Hyperbolic Conservation Laws
+<li> AMG/SA for Nonsymmetric Systems (Directed Graphs)
+<li> Root Node & New Ideal Interpolation
+<li> &alpha;SA
+<li> &alpha;AMG for Systems
+<li> "Ideal" Interpolation & Restrictions Revisited
+<li> Constrained and Unconstrained Optimization
+<li> A Multigrid Eigensolver for Laplace-Beltrami on Surfaces
+<li> A Finite Element Method for the Wilson-Dirac System
+<li> Estimating the Error Between the True Solution and an Iterate
+
+<h3>The 2014 Meeting</h3>
+<li> Root Node or Not Root Node in AMG
+<li> Predicting AMG Hierarchies
+<li> Strength of Connection
+<li> Selecting Aggregates
+<li> Right-Hand Side Aggregation
+<li> High-Order Discretization
+<li> Cheap FOSLS Adaptivity
+<li> Restriction Operators
+<li> Power Grid
+<li> Parallel Performance Models
+<li> Spectral AMG for Saddle Point Problems
+<li> FOSLS-RD
+<li> Parallel in Time
+<li> AMG Theoretical Aspects
+<li> Parallel AMG
+<li> N&#233;d&#233;lec Interpolation
+<li> Delta Relaxation
+<li> AMG for Systems
+<li> Graph Trees
+<li> Glacier Models
+<li> FOSLL*
+<li> A Posteriori Error Estimates
+<li> Are We Done Yet (with Adaptive AMG)?
+
+<h3>The 2013 Meeting</h3>
+<li> Multigrid for Stokes with Jump-Discontinuous Viscosity
+<li> Randomized Multigrid and Fault Tolerance
+<li> Multilevel Range/Domain Decomposition
+<li> Coarsening de Rham Sequences
+<li> Smoothed Aggregation Coarsening
+<li> Adaptive Smoothed Aggregation
+<li> Matrices with (Strong) Local Disturbances
+<li> Non-Galerkin Coarse Grids
+<li> Adaptive Mesh Refinement Range Decomposition
+<li> Multilevel Minimization with Sparsity Constraints
+<li> Scale-Free Graph Coarsening
+<li> Anisotropic Diffusion
+<li> Parallel in Time
+<li> Helmholtz Equations
+<li> AMG for Systems
+<li> Model Order Reduction
+<li> Uncertain Diffusion
+<li> Cloth
+<li> FOSLS/FOSLL*/Hybrid
+<li> Liquid Crystals
+<li> Reusing Preconditioiners
+
+<h3>The 2012 Meeting</h3>
+<li> Adaptive AMG for Coupled Systems
+<li> Anisotropic Diffusion
+<li> Fault Resilience
+<li> Multilevel Decomposition
+<li> Parallel AMR
+<li> Time-Space MG/Parareal
+<li> Uncertainty Quantification
+<li> Non-Galerkin Coarse Grids
+<li> Predicting AMG Hierarchies
+<li> Graph Matrix Problems
+<li> AMG for Low-Rank Perturbations
+<li> AMG for Power Grid Applications
+<li> Exascale AMG
+<li> Many Core Solvers
+<li> Performance Models
+
+<h3>The 2011 Meeting</h3>
+<li> Image Segmentation
+<li> AMG/SA for Anisotropic Diffusion
+<li> AMG/SA for Stokes in a Long Tube
+<li> AMG/SA for Stochastic PDEs/Glaciers
+<li> Multilevel Domain Decomposition
+<li> Additive MG
+<li> Parallel MG
+<li> AMG/SA for Weigheted-Norm FOSLS
+<li> MG for Spectro-Polarmetric Signal Fitting
+<li> Compatible Relaxation
+<li> Time-Space MG/Parareal
+<li> Uncertainty Quantification
+<li> Exascale Computing
+<li> Local-Schur Non-Galerkin MG
+<li> Parallel AMR
+
+<h3>The 2010 Meeting </h3>
+<li>Extendability of AMG:
+<ul>
+<li>Elliptic/Nonelliptic
+<li>Definite/Indefinite
+<li>Grids/Graphs/Networks
+<li>Local/Nonlocal
+<li>Sparse/Dense
+<li>Distributive/Parallel/Sequential
+<li>Linear/Nonlinear
+<li>Coarsening Full Equations/Approximation of Errors
+<li>Equations, Statistics, Clustering
+<li>Time Dependent/Steady State
+</ul>
+<li>AMG for Elasticity
+<li>AMG for Multicore Computers
+<li>QCD
+<li>BAMG/aAMG/aSA
+<li>Compatible Relaxation
+<li>Magnetohydrodynamics
+<li>Neutron Transport
+
+<h3>The 2009 Meeting </h3>
+<li> Image Segmentation
+<li> Parallel Compatible Relaxation
+<li> Compatible Relaxation Candidate Sets
+<li> Eigenproblems
+<li> Quantum Mechanics
+<li> Lattice Spin Systems
+<li> Markov Processes
+<li> Spin Systems
+<li> Secular Equations
+<li> Nonsymmetric Matrices
+<li> K-Cycles
+<li> AMG Interpolation for Elasticity
+<li> Bootstrap/Adaptive AMG for Systems
+<li> Parallel Smoothers
+
+<h3>The 2008 Meeting </h3>
+<li> Relaxation
+<li> Coarse Level
+<li> Interpolation
+<li> Markov Chains
+<li> Image Processing
+<li> Theory
+<li> Systems
+<li> QCD Physics
+<li> Improved aSA Coarsening
+<li> Number of aSA Bad Guys
+<li> Multiple aAMG Bad Guys
+<li> Bridging Scales
+<li> Group AMG
+
+<h3>The 2007 Meeting </h3>
+<li> QCD
+<li> Markov chains
+<li> Parallel AMG
+<li> Eigensolvers
+<li> MHD/Maxwell
+
+<h3>The 2006 Meeting </h3>
+<li>Parallel AMG
+<li>AMG Complexity
+<li>Coarsening Measures
+<li>caAMG Theory and Practice
+<li>High-Order AMG
+<li>Nonsymmetric AMG/SA
+<li>Smoothed Aggregation Eigensolver
+<li>QCD
+<li>Maxwell
+<li>Geometric vs. Algebraic MG
+<li>Additive vs. Multiplicative
+<li>Nonlinear Approximation (A)MG
+<li>MG for Transport
+<li>AMG Theory
+<li>AMG for Systems
+<li>Interpolation
+<li>Aggregation
+
+<br><br>
+
+<h3>The 2005 Meeting </h3>
+<li>aSA for Weighted Functionals
+<li>SA & aSA for Systems
+<li>General Strength Measures
+<li>AMG & Adaptive Refinement
+<li>AMG Starting Guesses
+<li>Minimizing ||PR||_A
+<li>Trace Minimization
+<li>Nonsymmetry
+<li>Viscoelasticity
+<li>Nested Iteration
+<li>Multigrid for Transport
+<li>Spectral-Element Multigrid
+<li>FOSLS Vorticity Form
+<li>Parallel FOSPACK
+<li>Coarse Variable Type
+
+<br><br>
+
+<h3>The 2004 Meeting </h3>
+<li>Weighted Functionals
+<li>Smooth Aggregation & e-Free AMGe
+<li>Nonlinearity
+<li>Almost Zero Modes
+<li>Measures
+<li>Coarse Variable Types
+<li>Sparsity of P / Dilution
+<li>Relaxation
+<li>Sharp Theory
+<li>Trace Minimization
+<li>Iradism
+<li>Upscaling
+<li>Wavelet AMG
+
+<br><br>
+
+<h3>The 2003 Meeting </h3>
+<li>aAMG
+<li>CR:
+<table>
+<tr><td>&nbsp&nbsp&nbsp&nbsp</td><td>max |e|?</td></tr>
+<tr><td></td><td>AMG vs SA P? </td></tr>
+<tr><td></td><td>systems, de-coarsening</td></tr>
+</table>
+
+<li>QCD
+<li>Aggregation
+<li>Nonsymmetric
+<li>NonPDEs
+
+<li>Fos-hyp-mg
+<li>Nonlinear mg
+<li>Hypre-amg
+<li>Singularities-h/p
+
+<li>h/p methods
+<li>Transport-conservation
+<li>L^1 minimization
+<li>Singularities
+<li>3D FOSLL*
+<li>Jaws
+
+
+
+
+  </div>
+</td>
+</tr>
+</table>
+
+<br><br>
+
+
+<br><br>
+<table width=63%>
+<tr><td>
+<!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+var sc_project=938597;
+var sc_invisible=1;
+var sc_partition=7;
+var sc_security="fd1c2700";
+</script>
+
+<script type="text/javascript" language="javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><a
+href="http://www.statcounter.com/" target="_blank"><img
+src="http://c8.statcounter.com/counter.php?sc_project=938597&amp;amp;java=0&amp;amp;security=fd1c2700&amp;amp;invisible=0" alt="website page counter"
+border="0"></a> </noscript>
+<!-- End of StatCounter Code -->
+</td></tr>
+</table>
+
+</center>
+
+</body>
+
